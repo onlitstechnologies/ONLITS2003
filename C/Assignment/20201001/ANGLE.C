@@ -1,7 +1,10 @@
-#include <math.h>
+#include<math.h>
+#include<stdio.h>
 
-#define MAX 180
-#define	PI 3.14
+#define MAX 180			//Defining symbolic constant
+#define	PI 3.14			//Defining symbolic constant
+
+
 	main()
 	{
 	 int angle;
@@ -19,3 +22,4 @@
 
 	return 0;
        }
+       
