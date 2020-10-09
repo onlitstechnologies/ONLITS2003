@@ -4,7 +4,7 @@
 
 int main()
 {
-	unsigned int a=65;
+	long a=65L;
 	
 	printf("a=%c\n", a);
 	
@@ -12,3 +12,5 @@ int main()
 	
 	return 0;
 }
+
+
