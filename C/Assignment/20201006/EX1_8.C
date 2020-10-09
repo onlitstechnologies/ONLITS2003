@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<conio.h>                                                                   x
+void main()
+{
+float a,F,C;
+clrscr();
+printf("ENTER TEMPERATURE IN CELSIUS\n");
+scanf("%f",&C);
+F=(1.8*C) + 32;
+printf("\nIn farenhite scale=%f",F);
+getch();
+}
