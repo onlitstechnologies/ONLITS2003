@@ -23,7 +23,7 @@ int main()
 	scanf("%d", &t.second);
 	
 	printf("The entered time is:\n");
-	printf("%d:%d:%d\n",t.hour,t.minute,t.second);
+	printf("%02d:%02d:%02d\n",t.hour,t.minute,t.second);
 	
 	return 0;
 }
