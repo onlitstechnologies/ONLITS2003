@@ -79,10 +79,16 @@ void printlist()
 	
 	fp = fopen("Census.001","r");
 	
+	printf("+----------------------+-----------------+----------------------+\n");
+	printf("| %-20s | %15s | %20s |\n", "City", "Population", "Literacy Level"); 
+	printf("+----------------------+-----------------+----------------------+\n");
+	
 	while(fscanf(fp, "%[^,],%ld,%f\n", c.city, &c.pop, &c.ll) != EOF)
 	{
-		printf("%s,%ld,%f\n", c.city, c.pop, c.ll);
+		printf("| %-20s | %15ld | %20.2f |\n", c.city, c.pop, c.ll);
 	}
+	
+	printf("+----------------------+-----------------+----------------------+\n");
 	
 	fclose(fp);
 }
