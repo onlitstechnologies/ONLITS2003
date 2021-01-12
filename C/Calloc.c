@@ -41,11 +41,11 @@ int main()
 		printf("%-15s%-3c%1.2f\n", "Age", ':', st_ptr->age);
 		printf("%-15s%-3c%ld\n", "Id Number", ':', st_ptr->id_num);
 	}
+	
+	free(st_ptr);
 		
 	return 0;
 }
-
-
 
 
 

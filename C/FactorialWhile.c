@@ -7,10 +7,12 @@ int main()
 	printf("Please enter a number: ");
 	scanf("%ld", &n);
 	
+	i=n;
 	
-	for(i=n; i>=1; i--)
+	while(i>1)
 	{
 		fact = fact * i;
+		i=i-1;
 	}
 	
 	printf("%ld! is %ld.\n", n, fact);
@@ -23,5 +25,4 @@ int main()
 	
 	approx 4 billion int in the gcc. (correct upto 12!)
 	for turbo c++ it is 32767	(8!)
-	
 */
