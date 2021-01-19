@@ -1,0 +1,19 @@
+h1 { 				/*Element Selector*/
+	color:Green;			/*Declation*/
+	text-align:center;
+}
+
+.p1 { 					/*Can be used with any element*/
+	color: orange;
+	text-indent: 50px;
+	text-align: justify;
+	letter-spacing: 3px;
+}
+
+p.p2 { 					/*Will be used with only p element*/
+	text-decoration: underline;
+}
+
+
+
+
