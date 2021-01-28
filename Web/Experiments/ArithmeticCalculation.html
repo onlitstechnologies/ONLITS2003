@@ -17,7 +17,24 @@
 			</form>
 		</div>
 		<div>
-			
+			<h1>Leap Year</h1>
+			<form>
+				<label>Year</label>
+				<input type="number" id="Year"><br><br>
+				<input type="text" id="Result" readonly><br><br>
+				<button type="button" onclick="leapYear()">Find</button>
+				<input type="reset" value="Reset">
+			</form>
+		</div>
+		<div>
+			<h1>Multiplication Table</h1>
+			<form>
+				<label>Number</label>
+				<input type="number" id="Number"><br><br>
+				<textarea id="Table" rows="12"></textarea><br><br>
+				<button type="button" onclick="multiplicationTable()">Show</button>
+				<input type="reset" value="Reset">
+			</form>
 		</div>
 		<script>
 			function add() {
@@ -29,6 +46,30 @@
 				c = parseInt(a) + parseInt(b);
 				
 				document.getElementById('Sum').value = c;
+			}
+			
+			function leapYear() {
+				let yr;
+				
+				yr = document.getElementById('Year').value;
+				
+				if((yr%4==0 && yr%100!=0) || yr%400==0) {
+					document.getElementById('Result').value = "Leap Year!";
+				}
+				else {
+					document.getElementById('Result').value = "Common Year!";
+				}				
+			}
+			function multiplicationTable() {
+				let n, p, i;
+				
+				n = document.getElementById('Number').value;
+				
+				for(i=1; i<=10; i++) {
+					p = n * i;
+					
+					document.getElementById('Table').innerHTML = document.getElementById('Table').innerHTML + n + " x " + i + " = " + p + "\n";
+				}
 			}
 		</script>
 	<body>
