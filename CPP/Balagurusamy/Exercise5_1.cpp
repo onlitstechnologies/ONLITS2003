@@ -1,28 +1,90 @@
 #include<iostream>
-#include<cstring>
 
 using namespace std;
 
 class bank_account
 {
 private:
-	char depositor_name[30];
-	char account_number[5];
-	char account_type[3];
+	string depositor_name;
+	string account_number;
+	string account_type;
 	float balance;
 public:
+	void menu();
 	void init();
 	void deposit();
 	void withdraw();
 	void display();
 };
 
+void bank_account :: menu()
+{
+	int ch;
+	cout<<endl<<"--------------------------------"<<endl;
+	cout<<"SERVICES MENU"<<endl;
+	cout<<"--------------------------------"<<endl;
+	cout<<"1. Deposit Amount"<<endl;
+	cout<<"2. Withdraw Amount"<<endl;
+	cout<<"3. Display Balance"<<endl;
+	cout<<"4. Quit"<<endl;
+	cout<<"Enter choice: ";
+	cin>>ch;
+	
+	switch(ch)
+	{
+		case 1:
+			deposit();
+			menu();
+			break;
+		case 2:
+			withdraw();
+			menu();
+			break;
+		case 3:
+			display();
+			menu();
+			break;
+		case 4:
+			exit(0);
+			break;
+		default:
+			cout<<"Invalid option!"<<endl;
+			menu();
+	}
+	
+}
 void bank_account :: init()
 {
-	strcpy(depositor_name, "Shiva Kashyap");
-	strcpy(account_number, "1234");
-	strcpy(account_type, "SA");
+	depositor_name = "Shiva Kashyap";
+	account_number = "1234";
+	account_type = "SA";
 	balance = 5000.00F;
+}
+
+void bank_account :: deposit()
+{
+	float amount;
+	cout<<"Enter amount to deposit: ";
+	cin>>amount;
+	balance += amount;
+	cout<<"Transaction Successful!"<<endl;
+}
+
+void bank_account :: withdraw()
+{
+	float amount;
+	cout<<"Enter amount to withdraw: ";
+	cin>>amount;
+	
+	if(amount<=balance)
+	{
+		balance -= amount;
+		cout<<"Transaction Successful!"<<endl;
+	}
+	else
+	{
+		cout<<"Transaction declined!"<<endl;
+	}
 }
 
 void bank_account :: display()
@@ -39,7 +101,7 @@ int main()
 {
 	bank_account ac;
 	ac.init();
-	ac.display();
+	ac.menu();
 	return 0;
 }
 
