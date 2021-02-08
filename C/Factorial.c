@@ -2,10 +2,10 @@
 
 int main()
 {
-	long n, fact=1, i;
+	int n, fact=1, i;
 	
 	printf("Please enter a number: ");
-	scanf("%ld", &n);
+	scanf("%d", &n);
 	
 	
 	for(i=n; i>=1; i--)
@@ -13,7 +13,7 @@ int main()
 		fact = fact * i;
 	}
 	
-	printf("%ld! is %ld.\n", n, fact);
+	printf("%d! is %d.\n", n, fact);
 	
 	return 0;
 }
