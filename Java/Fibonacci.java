@@ -13,7 +13,7 @@ class Fibonacci {
 			System.out.print(ft + ", " + st);
 			for(int i=3; i<=n; i++) {
 				nt=ft+st;
-				System.out.print(" ," + nt);
+				System.out.print(", " + nt);
 				ft = st;
 				st = nt;
 			}
