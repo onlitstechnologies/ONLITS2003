@@ -25,7 +25,7 @@ int main()
 	
 	cout<<"The sorted array is:"<<endl;
 	
-	for(int i=0; i<SIZE; i++)
+	for(int i=0; i<SIZE; i++)	//Output
 	{
 		cout<<no[i]<<endl;
 	}
