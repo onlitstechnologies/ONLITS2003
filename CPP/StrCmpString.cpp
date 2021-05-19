@@ -3,14 +3,13 @@
 */
 
 #include<iostream>
-#include<cstring>
 using namespace std;
 int main()
 {
-    char ans[50];
+    string ans;
     cout<<"Who is the father of C++?"<<endl;
-    cin.getline(ans,50);
-    if(strcmp(ans, "Bjarne Stroustrup") == 0 || strcmp(ans, "bjarne stroustrup") == 0 || strcmp(ans, "BJARNE STROUSTRUP") == 0)
+    getline(cin, ans);
+    if(ans == "Bjarne Stroustrup" || ans == "bjarne stroustrup"  || ans == "BJARNE STROUSTRUP")
     {
         cout<<"Very Good!"<<endl;
     }
@@ -19,3 +18,5 @@ int main()
         cout<<"Very Poor!"<<endl;
     }
 }
+
+/* here ans is objece */
