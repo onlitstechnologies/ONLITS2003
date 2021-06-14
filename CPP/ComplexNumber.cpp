@@ -59,7 +59,9 @@ int main()
     complex c1(10.3F, 20.6F);
     complex c2(25.6F,99.7F); 
     complex c3;
+    //Here c1, c2 and c3 are objects
     complex *c = new complex(15.3F, 17.3F);
+    //Here *c is pointer to object
     //c3 = c1.add(c2);
     c3 = c1 + c2;           //possible via operator overloading
     c1.display();           //this is c1
