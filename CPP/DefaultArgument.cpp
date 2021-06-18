@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-float si(float p, float r, float t=1);
+float si(float p, float r, float t = 1);
 int main()
 {
     float p, r, t;
