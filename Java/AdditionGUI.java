@@ -1,6 +1,7 @@
 import java.awt.*;
+import java.awt.event.*;
 
-public class AdditionGUI extends Frame {
+public class AdditionGUI extends Frame implements ActionListener{
     Label lblaugend, lbladdend, lblsum;
     TextField txtaugend, txtaddend, txtsum;
     Button btnadd;
@@ -37,7 +38,15 @@ public class AdditionGUI extends Frame {
 
         btnadd = new Button("Add");
         btnadd.setBounds(30, 200, 100, 30);
+        btnadd.addActionListener(this);
         add(btnadd);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        int a = Integer.parseInt(txtaugend.getText());
+        int b = Integer.parseInt(txtaddend.getText());
+        int c = a + b;
+        txtsum.setText(Integer.toString(c));
     }
     public static void main(String[] args) {
         new AdditionGUI();
