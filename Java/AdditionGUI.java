@@ -48,7 +48,19 @@ public class AdditionGUI extends Frame implements ActionListener{
         int c = a + b;
         txtsum.setText(Integer.toString(c));
     }
+
     public static void main(String[] args) {
-        new AdditionGUI();
+        // new AdditionGUI();
+        new AdditionGUIChild();
     }
+}
+
+class AdditionGUIChild extends AdditionGUI {
+    AdditionGUIChild()
+    {
+        Label lblMessage = new Label("AdditionGUIChild");
+        lblMessage.setBounds(150, 200, 150, 30);
+        add(lblMessage);
+    }
+
 }
