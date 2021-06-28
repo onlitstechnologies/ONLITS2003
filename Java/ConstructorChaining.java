@@ -1,7 +1,8 @@
-package inheritanceexample;
+package onlits2003.constructorchaining;
+
 
 class A {
-    protected int a;
+    private int a;
 
     A() {
     }
@@ -26,7 +27,7 @@ class B extends A {
     }
 
     B(int x, int y) {
-        a = x;
+        super(x);                   //super keyword here refers to super class constructor
         b = y;
     }
 
@@ -35,12 +36,12 @@ class B extends A {
     }
 
     void display_ab() {
-        System.out.println("a = " + a);
-        System.out.println("b = " + b);
+        display_a();
+        display_b();
     }
 }
 
-public class InheritanceExample {
+public class ConstructorChaining {
     public static void main(String[] args) {
         B obb = new B(10, 20);
         obb.display_ab();
