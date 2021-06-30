@@ -1,6 +1,5 @@
 package onlits2003.constructorchaining;
 
-
 class A {
     private int a;
 
