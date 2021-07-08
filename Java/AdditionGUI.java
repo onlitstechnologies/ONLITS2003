@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.awt.event.*;
+import java.lang.Integer;
 
 public class AdditionGUI extends Frame implements ActionListener{
     Label lblaugend, lbladdend, lblsum;
