@@ -5,10 +5,10 @@ using namespace std;
 class shape         //Abstract Class
 {
 public:
-    const float PI=3.14;
+    const float PI = 3.14F;            //Constant   
 
-    virtual void input() = 0;       //pure virtual function
-    virtual float area() = 0;       //pure virtual function
+    virtual void input() = 0;       //pure virtual function (abstract)
+    virtual float area() = 0;       //pure virtual function (abstract)
 };
 
 class circle : public shape
@@ -60,7 +60,7 @@ public:
     float area()            //Overriding area()
     {
         s = (a + b + c)/2;
-        return sqrt(s*((s-a) * (s-b) * (s-c)));      //Herons Formula
+        return (float) sqrt(s*((s-a) * (s-b) * (s-c)));      //Herons Formula
     }
 };
 
@@ -68,16 +68,16 @@ int main()
 {
     shape *s;
     s = new circle();
-    s->input();
-    cout<<"The area of circle is "<<s->area()<<endl;
+    s->input();                 //Runtime Polymorphism
+    cout<<"The area of circle is "<<s->area()<<endl;        //Runtime Polymorphism
 
     s = new rectangle();
-    s->input();
-    cout<<"The area of rectange is "<<s->area()<<endl;
+    s->input();                 //Runtime Polymorphism
+    cout<<"The area of rectange is "<<s->area()<<endl;      //Runtime Polymorphism
 
     s = new triangle();
-    s->input();
-    cout<<"The area of triangle is "<<s->area()<<endl;
+    s->input();                 //Runtime Polymorphism
+    cout<<"The area of triangle is "<<s->area()<<endl;      //Runtime Polymorphism
 
     return 0;
 }

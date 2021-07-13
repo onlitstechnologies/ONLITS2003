@@ -1,12 +1,12 @@
 import java.util.Scanner;
-abstract class Shape {                 //Abstract Class
+interface IShape {                 //Abstract Class
     public final float PI = 3.14F;          //Constant declaration
  
     public abstract void input();
     public abstract float area();
 }
 
-class Circle extends Shape {
+class ICircle implements IShape {
     private float rad;
     public void input() {
         Scanner sc = new Scanner(System.in);
@@ -20,7 +20,7 @@ class Circle extends Shape {
     }
 }
 
-class Rectangle extends Shape {
+class IRectangle implements IShape {
     private float ln, br;
     public void input() {
         Scanner sc = new Scanner(System.in);
@@ -28,7 +28,7 @@ class Rectangle extends Shape {
         ln = sc.nextFloat();
         System.out.print("Enter breadth: ");
         br = sc.nextFloat();
-        sc.close();
+        //sc.close();
     }
     public float area() {
         return ln * br;
@@ -36,7 +36,7 @@ class Rectangle extends Shape {
 
 }
 
-class Triangle extends Shape {
+class ITriangle implements IShape {
     private float a, b, c, s;
     public void input() {
         Scanner sc = new Scanner(System.in);
@@ -52,18 +52,18 @@ class Triangle extends Shape {
     }
 }
 
-public class AbstractClassDemo {
+public class InterfaceDemo {
     public static void main(String[] args) {
-        Shape s;
-        s = new Circle();
+        IShape s;
+        s = new ICircle();
         s.input();              //Runtime Polymorphism
         System.out.println("The area of circle is " + s.area());    //Runtime Polymorphism
 
-        s = new Rectangle();
+        s = new IRectangle();
         s.input();              //Runtime Polymorphism
         System.out.println("The area of circle is " + s.area());    //Runtime Polymorphism
 
-        s = new Triangle();
+        s = new ITriangle();
         s.input();              //Runtime Polymorphism
         System.out.println("The area of triangle is " + s.area());  //Runtime Polymorphism
     }
