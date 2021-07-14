@@ -6,13 +6,22 @@ interface IShape {                 //Abstract Class
     public abstract float area();
 }
 
-class ICircle implements IShape {
+interface Test {
+    void test();
+}
+
+class ICircle implements IShape, Test {
     private float rad;
     public void input() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter radius: ");
         rad = sc.nextFloat();
         //sc.close();
+    }
+
+    public void test()
+    {
+        System.out.println("This is a test method!");
     }
 
     public float area() {
@@ -66,5 +75,8 @@ public class InterfaceDemo {
         s = new ITriangle();
         s.input();              //Runtime Polymorphism
         System.out.println("The area of triangle is " + s.area());  //Runtime Polymorphism
+
+        ICircle c = new ICircle();
+        c.test();
     }
 }

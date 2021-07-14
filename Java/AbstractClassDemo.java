@@ -4,6 +4,9 @@ abstract class Shape {                 //Abstract Class
  
     public abstract void input();
     public abstract float area();
+    public void test() {
+        System.out.println("This is a test method!");
+    }
 }
 
 class Circle extends Shape {
@@ -13,6 +16,10 @@ class Circle extends Shape {
         System.out.print("Enter radius: ");
         rad = sc.nextFloat();
         //sc.close();
+    }
+
+    public void test() {
+        System.out.println("This test method is overriddin in Circle!");
     }
 
     public float area() {
@@ -28,7 +35,7 @@ class Rectangle extends Shape {
         ln = sc.nextFloat();
         System.out.print("Enter breadth: ");
         br = sc.nextFloat();
-        sc.close();
+        //sc.close();
     }
     public float area() {
         return ln * br;
@@ -58,6 +65,7 @@ public class AbstractClassDemo {
         s = new Circle();
         s.input();              //Runtime Polymorphism
         System.out.println("The area of circle is " + s.area());    //Runtime Polymorphism
+        s.test();
 
         s = new Rectangle();
         s.input();              //Runtime Polymorphism
@@ -66,5 +74,6 @@ public class AbstractClassDemo {
         s = new Triangle();
         s.input();              //Runtime Polymorphism
         System.out.println("The area of triangle is " + s.area());  //Runtime Polymorphism
+
     }
 }
